@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: beige;
+}
+
+input {
+    padding: 10px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #f4f4f4;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+header {
+    background-color: blanchedalmond;
+    color: rgb(12, 10, 8);
+    padding:5px;
+   
+}
+.container{
+    padding: 60px;
+    background-color: beige;
+}
+h1{
+    font-size: 3rem;
+    text-shadow: 4px 4px 10px;
+    font-weight: bold;
+    color: bisque;
+    background: linear-gradient(to left,#f8f7f6,#080808); 
+}  
