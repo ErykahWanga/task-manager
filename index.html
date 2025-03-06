@@ -3,22 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>taskmanager</title>
+    <title>Task Manager</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1><strong><em>TASK MANAGRER</em></strong></h1>
+        <img src="https://cdn.create.vista.com/api/media/small/230249078/stock-vector-postpone-icon-flat-element-vector-illustration-of-postpone-icon-flat-isolated-on-clean-background-for" alt="web-logo" class="logo">
+        <h1><strong><em>TASK MANAGER</em></strong></h1>
+        <button id="logout-btn" onclick="logout()">Logout</button>
     </header>    
+
     <div class="container">
         <div>
+            <h2>Welcome, <span id="usernameDisplay"></span>!</h2>
             <input type="text" id="taskInput" placeholder="Enter a task">
             <input type="datetime-local" id="taskTime">
             <button onclick="addTask()">Add Task</button>
-            <br>
             <ul id="taskList"><em>YOUR TASKS</em></ul>
         </div>
-        <script src="script.js"></script>
-        
+    </div>
+
+    <script>
+        // Redirect to login page if user is not logged in
+        let loggedInUser = localStorage.getItem("loggedInUser");
+        if (!loggedInUser) {
+            alert("You need to log in first!");
+            window.location.href = "login.html";
+        } else {
+            document.getElementById("usernameDisplay").innerText = loggedInUser;
+        }
+
+        // Logout function
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            window.location.href = "login.html";
+        }
+    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>

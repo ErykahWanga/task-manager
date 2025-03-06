@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", loadTasks);
 if (Notification.permission !== "granted") {
     Notification.requestPermission();
 }
-console.log("Javaascript is working!")
+console.log("Javascript is working!")
 
 // Function to add a new task
 function addTask() {
@@ -88,8 +88,10 @@ function scheduleNotification(task, time) {
         setTimeout(() => {
             new Notification("Task Reminder", {
                 body: `Reminder: ${task} is due!`,
-                icon: "notification-icon.png" // Optional: Add an icon
+                icon: "https://cdn.create.vista.com/api/media/small/230249078/stock-vector-postpone-icon-flat-element-vector-illustration-of-postpone-icon-flat-isolated-on-clean-background-for" // Optional: Add an icon
             });
         }, delay);
     }
+    
 }
+SVGComponentTransferFunctionElemen
